@@ -24,13 +24,13 @@ const assertArraysEqual = function(arr1, arr2) {
 const middle = function(arr) {
   if (arr.length < 3) {
     return [];
-  };
+  }
   let middleIndex = Math.floor(arr.length / 2);
   if (arr.length % 2 === 0) {
     return [arr[middleIndex - 1], arr[middleIndex]];
-  };
+  }
   return arr.slice(middleIndex, middleIndex + 1);
-}
+};
 
 assertArraysEqual(middle([1, 2]), []);
 assertArraysEqual(middle([1, 2, 3]), [2]);

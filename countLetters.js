@@ -1,11 +1,12 @@
-const countLetters = function(str) {
-  str = str.replace(/\s/g, '');
-  return str.split("").reduce((result, item) => {
-    if (!result.hasOwnProperty(item)) {
-      result[item] = 1;
+const countLetters = function (str) {
+  let strArr = str.replace(/\s/g, "").split("");
+  let result = {};
+  for (let char of strArr) {
+    if (!Object.keys(result).includes(char)) {
+      result[char] = 1;
     } else {
-      result[item] += 1;
+      result[char] += 1;
     }
-    return result;
-  }, {});
+  }
+  return result;
 };

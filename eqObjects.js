@@ -14,14 +14,9 @@ const assertEqual = function (actual, expected) {
   }
 };
 
+// Shallow array equality check, not checking for nested arrays or arrays of objects that are identical.
 const eqArrays = function (arr1, arr2) {
-  if (arr1 === undefined || arr2 === undefined) {
-    return false;
-  } else if (arr1.length !== arr2.length) {
-    return false;
-  } else if (arr1.length === 0 && arr2.length === 0) {
-    return true;
-  }
+  if (!arr1 || !arr2 || arr1.length !== arr2.length) return false;
   for (let n in arr1) {
     if (arr1[n] !== arr2[n]) return false;
   }

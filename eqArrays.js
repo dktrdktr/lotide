@@ -1,4 +1,3 @@
-// Shallow array equality check, not checking for nested arrays or arrays of objects that are identical.
 const eqArrays = function(arr1, arr2) {
   if (
     !Array.isArray(arr1) ||
@@ -35,6 +34,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// TEST CASES
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
 

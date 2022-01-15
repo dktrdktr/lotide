@@ -57,6 +57,7 @@ const eqObjects = function(obj1, obj2) {
   return true;
 };
 
+// TEST CASES
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 const abc = { a: "1", b: "2", c: "3" };

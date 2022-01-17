@@ -1,4 +1,4 @@
-const countLetters = function(str) {
+const countLetters = function (str) {
   let strArr = str.replace(/\s/g, "").split("");
   let result = {};
   for (let char of strArr) {
@@ -10,3 +10,5 @@ const countLetters = function(str) {
   }
   return result;
 };
+
+module.exports = countLetters;

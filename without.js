@@ -1,5 +1,5 @@
 // Shallow array equality check, not checking for nested arrays or arrays of objects that are identical.
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function (arr1, arr2) {
   if (
     !Array.isArray(arr1) ||
     !Array.isArray(arr2) ||
@@ -11,7 +11,7 @@ const eqArrays = function(arr1, arr2) {
   }
   return true;
 };
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function (arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
     console.log(`Assertion Passed: ${arr1} === ${arr2}`);
   } else {
@@ -19,7 +19,7 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const without = function(source, itemsToRemove) {
+const without = function (source, itemsToRemove) {
   let result = [];
   for (let n of source) {
     if (!itemsToRemove.includes(n)) {
@@ -28,6 +28,8 @@ const without = function(source, itemsToRemove) {
   }
   return result;
 };
+
+module.exports = without;
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without([1, 2, 3], [2]), [1, 3]);

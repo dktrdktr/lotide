@@ -1,5 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(
       `${String.fromCodePoint(
@@ -18,6 +18,8 @@ const assertEqual = function(actual, expected) {
 const findKey = (obj, callback) => {
   return Object.keys(obj).find((item) => callback(obj[item]));
 };
+
+module.exports = findKey;
 
 assertEqual(
   findKey(

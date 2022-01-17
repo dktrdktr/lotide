@@ -1,7 +1,7 @@
 const words = ["ground", "control", "to", "major", "tom"];
 
 // Shallow array equality check, not checking for nested arrays or arrays of objects that are identical.
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function (arr1, arr2) {
   if (
     !Array.isArray(arr1) ||
     !Array.isArray(arr2) ||
@@ -14,7 +14,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function (arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
     console.log(`Assertion Passed: ${arr1} === ${arr2}`);
   } else {
@@ -22,7 +22,7 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const map = function(array, callback) {
+const map = function (array, callback) {
   const results = [];
   for (let item of array) {
     results.push(callback(item));
@@ -30,8 +30,7 @@ const map = function(array, callback) {
   return results;
 };
 
-const results1 = map(words, (word) => word[0]);
-console.log(results1);
+module.exports = map;
 
 assertArraysEqual(
   map(words, (word) => word[0]),

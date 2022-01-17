@@ -1,5 +1,5 @@
 // Shallow array equality check, not checking for nested arrays or arrays of objects that are identical.
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function (arr1, arr2) {
   if (
     !Array.isArray(arr1) ||
     !Array.isArray(arr2) ||
@@ -12,7 +12,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function (arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
     console.log(`Assertion Passed: ${arr1} === ${arr2}`);
   } else {
@@ -20,7 +20,7 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const letterPositions = function(sentence) {
+const letterPositions = function (sentence) {
   const results = {};
   // logic to update results here
   for (let letterIndex in sentence) {
@@ -32,9 +32,10 @@ const letterPositions = function(sentence) {
       }
     }
   }
-  console.log(results);
   return results;
 };
+
+module.exports = letterPositions;
 
 assertArraysEqual(letterPositions("lighthouse in the house")["l"], [0]);
 assertArraysEqual(letterPositions("lighthouse in the house")["i"], [1, 11]);

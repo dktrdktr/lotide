@@ -1,5 +1,5 @@
 // Shallow array equality check, not checking for nested arrays or arrays of objects that are identical.
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function (arr1, arr2) {
   if (
     !Array.isArray(arr1) ||
     !Array.isArray(arr2) ||
@@ -12,7 +12,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(
       `${String.fromCodePoint(
@@ -36,6 +36,8 @@ const takeUntil = (data, callback) => {
   }
   return result;
 };
+
+module.exports = takeUntil;
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, (x) => x < 0);

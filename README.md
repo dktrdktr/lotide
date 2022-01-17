@@ -21,11 +21,3 @@ This project was created and published by me as part of my learnings at Lighthou
 **Call it:**
 
 `const results = _.tail([1, 2, 3]) // => [2, 3]`
-
-## Documentation
-
-The following functions are currently implemented:
-
-- `function1(...)`: description
-- `function2(...)`: description
-- `function3(...)`: description
